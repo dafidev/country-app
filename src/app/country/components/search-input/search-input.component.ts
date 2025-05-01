@@ -10,9 +10,8 @@ export class SearchInputComponent {
   placeholder = input('Search');
 
   OnSearch(value: string) {
-    if (value.length > 1) {
+    if (value.length > 0) {
       this.value.emit(value);
-      console.log({ value });
     }
   }
 }
