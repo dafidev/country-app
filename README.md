@@ -1,59 +1,51 @@
-# CountryApp
+# 🌍 Country Search App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+This application was developed using [Angular CLI](https://github.com/angular/angular-cli) (version 19.2.7). It allows users to search for countries by their capital city using the public [REST Countries API](https://restcountries.com/). The app displays a list of matching countries and manages UI states like loading and error using **signals**.
 
-## Development server
+## 🚀 Main Features
 
-To start a local development server, run:
+- Search countries by capital with a reactive input.
+- Display country information such as flag, population, and capital.
+- Handles loading and error states reactively.
+- Modern architecture using standalone components, signals, and nested routing.
+- Styling powered by TailwindCSS.
+
+## 🧑‍💻 Local Development
+
+To start a local development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at `http://localhost:4200/`. The app will reload automatically when you modify the source files.
 
-## Code scaffolding
+## 📁 Folder Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `src/app/country/` → Components and services for country search.
+- `src/app/shared/` → Reusable components like search input and country list.
+- `src/app/services/country.service.ts` → HTTP service using `HttpClient` to query the external API.
+- `src/app/mappers/` → Functions to map REST models to internal models.
 
-```bash
-ng generate component component-name
-```
+## 🧪 Running Tests
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To run unit tests:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## 🛠 Building
 
-For end-to-end (e2e) testing, run:
+To compile the project:
 
 ```bash
-ng e2e
+ng build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The build artifacts will be stored in the `dist/` directory.
 
-## Additional Resources
+## 📚 Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular CLI Documentation](https://angular.dev/tools/cli)
+- [REST Countries API](https://restcountries.com/)

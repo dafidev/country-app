@@ -26,8 +26,31 @@
           </span>
         </td>
         <td>
-          <a class="link-primary cursor-pointer"> More information</a>
+          <a
+            [routerLink]="['/country/by', country.cca2]"
+            class="link-primary cursor-pointer"
+          >
+            More information</a
+          >
         </td>
+      </tr>
+      } @if (errorMessage()) {
+      <tr>
+        <td colspan="8" class="text-center">
+          {{ errorMessage() }}
+        </td>
+      </tr>
+      }
+      <!--  -->
+      @if (countries().length == 0 && !isLoading()) {
+      <tr>
+        <td colspan="8" class="text-center">Results not found</td>
+      </tr>
+      }
+      <!--  -->
+      @if (isLoading() == true) {
+      <tr>
+        <td colspan="8" class="text-center">Finding results...</td>
       </tr>
       }
     </tbody>

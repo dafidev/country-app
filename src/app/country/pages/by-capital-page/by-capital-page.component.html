@@ -3,8 +3,12 @@
   (value)="onSearch($event)"
 />
 @if (errorMessage()) {
-<h3>{{ errorMessage() }}</h3>
-<country-list [countries]="[]" />
+<country-list
+  [countries]="[]"
+  [errorMessage]="errorMessage()"
+  [isLoading]="isLoading()"
+  [isEmpty]="countries().length == 0"
+/>
 } @else{
 <country-list [countries]="countries()" />
 }
